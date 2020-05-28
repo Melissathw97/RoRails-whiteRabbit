@@ -1,6 +1,10 @@
 <%= form_with model: @task, local: true do |f| %>
 
   <p>
+    <%= f.collection_select :category_id, Category.all, :id, :name, { prompt: "Choose a category" } %>
+  </p>
+  
+  <p>
     <%= f.label "Task title" %><br>
     <%= f.text_field :title %>
   </p>

@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <div>
+      <% Category.all.each do |category| %>
+        <%= link_to category.name, tasks_path(category: category.name) %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
