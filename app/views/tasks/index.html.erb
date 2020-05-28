@@ -1,8 +1,14 @@
-<h1>Index</h1>
+<div id="task_wrapper">
+  <div class="tasks">
+    <h1>Index</h1>
 
-<% @tasks.each do |task| %>
-  <h2><%= link_to task.title, task %></h2>
-  <p><%= task.company %></p>
-<% end %>
+    <% @tasks.each do |task| %>
+      <div class="task">
+        <h2><%= link_to task.title, task %></h2>
+        <p><%= task.company %></p>
+      </div>
+    <% end %>
 
-<%= link_to "New Task", new_task_path %>
+    <%= link_to "New Task", new_task_path, class: "button" %>
+  </div>
+</div>

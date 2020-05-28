@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 10px;
+  height: 97vh;
+  background-image: image-url('whiteRabbit.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+#navbar {
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-radius: 15px;
+  
+
+  .categories {
+    a {
+      margin: 0 5px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  padding: 7px 15px;
+  border: 1px solid white;
+  border-radius: 15px;
+}
