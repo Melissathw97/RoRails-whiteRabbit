@@ -8,6 +8,9 @@ body {
   background-position: center;
   background-attachment: fixed;
   text-align: center;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  font-size: 1.3em;
+  line-height: 20px;
 }
 
 #navbar {
@@ -15,13 +18,31 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 5px 30px;
   border-radius: 15px;
   
+  .logo {
+    width: 200px;
+  }
 
   .categories {
-    a {
-      margin: 0 5px;
+    .category_name {
+      margin-left: 5px;
+      font-weight: bold;
+
+      &:hover {
+        color: maroon;
+      }
+    }
+    
+    .spade {
+      width: 15px;
+      margin: 0 15px -3px 0;
+      visibility: hidden;
+    }
+
+    .category_name:hover + .spade {
+      visibility: visible;
     }
   }
 }
@@ -32,7 +53,11 @@ a {
 }
 
 .button {
-  padding: 7px 15px;
-  border: 1px solid white;
+  padding: 5px 20px 0px;
+  background: white;
   border-radius: 15px;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
 }
