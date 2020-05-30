@@ -19,18 +19,18 @@
     }
 
     .task:nth-of-type(odd) {
-      background: $blue;
+      background: $powder-blue;
 
       h2 {
-        color: rgb(37, 157, 255);
+        color: $blue;
       }
     }
 
     .task:nth-of-type(even) {
-      background-color: $pink;
+      background-color: $powder-pink;
 
       h2 {
-        color: rgb(248, 89, 89);
+        color: $red;
       }
     }
 
