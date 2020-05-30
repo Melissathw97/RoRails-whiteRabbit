@@ -9,11 +9,11 @@
     background: rgba(255, 255, 255, 0.45);
     width: 60vw;
     max-width: 720px;
-    padding: 30px 20px 50px;
+    padding: 20px 20px 50px;
     border-radius: 20px;
 
     .task {
-      padding: 5px 0;
+      padding: 5px 0 2px;
       margin: 15px 0;
       border-radius: 20px;
     }
@@ -37,11 +37,20 @@
     .task:nth-last-of-type(1) {
       margin-bottom: 40px;
     }
+
+    .task_description {
+      padding: 10px 30px 30px;
+    }
+
+    .links {
+      margin: 20px 0 0;
+      font-size: 0.8em;
+    }
   }
 }
 
 #task_form {
-  padding: 30px 0;
+  padding: 20px 0;
   margin: 20px 0;
   position: relative;
   overflow-y: hidden;
@@ -54,7 +63,7 @@
   width: 100%;
   z-index: -1;
   opacity: 0.9;
-  background-image: image-url('Alice-bg-2.png');
+  background-image: image-url('Alice-bg.png');
   background-size: cover;
   background-position: center;
   position: absolute;
