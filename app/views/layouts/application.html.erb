@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rabbit</title>
+    <title>WhiteRabbit</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag "WhiteRabbit-favicon.png" %>
   </head>
 
   <body>
     <div id="navbar">
-      <h2>WhiteRabbit</h2>
+      <%= image_tag("WhiteRabbit_logo.png", alt:"logo", class: "logo") %>
       <div class="categories">
+        <%= link_to "All Tasks", root_path, class: "category_name" %>
+        <%= image_tag("spade-icon.png", alt:"spade-icon", class: "spade") %>
         <% Category.all.each do |category| %>
-          <%= link_to category.name, tasks_path(category: category.name) %>
+            <%= link_to category.name, tasks_path(category: category.name), class: "category_name" %>
+            <%= image_tag("spade-icon.png", alt:"spade-icon", class: "spade") %>
         <% end %>
+        <%= link_to "New Task", new_task_path, class: "button" %>
       </div>
     </div>
   <%= yield %>
